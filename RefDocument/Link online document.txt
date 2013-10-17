@@ -1,5 +1,0 @@
-Bootstrap: 	http://getbootstrap.com/
-Jquery: 	http://jquery.com/
-		http://jqueryui.com/
-Concept map:	http://cmap.ihmc.us/publications/researchpapers/theorycmaps/theoryunderlyingconceptmaps.htm
-ASP.NET:	http://www.asp.net/mvc/tutorials/mvc-4/getting-started-with-aspnet-mvc4/intro-to-aspnet-mvc-4
