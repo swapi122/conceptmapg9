@@ -1,0 +1,5 @@
+D:\Hoc Tap\Hoc Ky VII\Tieu luan chuyen nganh\Testing\HF_Paper_Prototype\HF_Paper_Prototype\bin\HF_Paper_Prototype.dll
+D:\Hoc Tap\Hoc Ky VII\Tieu luan chuyen nganh\Testing\HF_Paper_Prototype\HF_Paper_Prototype\bin\HF_Paper_Prototype.pdb
+D:\Hoc Tap\Hoc Ky VII\Tieu luan chuyen nganh\Testing\HF_Paper_Prototype\HF_Paper_Prototype\obj\Debug\HF_Paper_Prototype.dll
+D:\Hoc Tap\Hoc Ky VII\Tieu luan chuyen nganh\Testing\HF_Paper_Prototype\HF_Paper_Prototype\obj\Debug\HF_Paper_Prototype.pdb
+D:\Hoc Tap\Hoc Ky VII\Tieu luan chuyen nganh\Testing\HF_Paper_Prototype\HF_Paper_Prototype\obj\Debug\HF_Paper_Prototype.csprojResolveAssemblyReference.cache

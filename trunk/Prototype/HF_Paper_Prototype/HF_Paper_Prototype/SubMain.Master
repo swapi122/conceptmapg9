@@ -1,0 +1,154 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SubMain.Master.cs" Inherits="HF_Paper_Prototype.SubMain" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap-3.0.0/dist/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="bootstrap-3.0.0/dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="bootstrap/css/style.css" type="text/css" />
+    <!-- Documentation extras -->
+    <link type="text/css" href="bootstrap-3.0.0/assets/css/docs.css" rel="stylesheet" />
+    <link type="text/css" href="bootstrap-3.0.0/assets/css/pygments-manni.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <div>
+        <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#" style="font-family:Cambria;font-size:17pt;">Concept maps</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="../default.aspx" title="Trang chủ">Trang chủ</a></li>
+                        <li><a href="../TongQuan.aspx" title="Tổng quan">Tổng quan</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Theo chủ đề <b class="caret"></b></a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <li><a href="../ToanHoc.aspx" title="Toán học">Toán học</a></li>
+                                <li><a href="../VatLy.aspx" title="Vật lý">Vật lý</a></li>
+                                <li><a href="../HoaHoc.aspx" title="Hóa học">Hóa học</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#" title="Lịch sử">Lịch sử</a></li>
+                                <li><a href="#" title="Địa lý">Địa lý</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#" title="Âm nhạc">Âm nhạc</a></li>
+                                <li><a href="#" title="Hội họa">Hội họa</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../CreateConceptMaps.aspx" title="Tạo concept maps">Tạo concept maps</a></li>
+                        <li>
+                            <div class="container" style="width:300px;height:37px;margin-top:8px">
+                                <div class="col-lg-12">
+                                    <div class="input-group">
+                                      <input type="text" class="form-control" placeholder="Nhập từ khóa" />
+                                      <span class="input-group-btn">
+                                        <button id="Search" class="btn btn-default" value=""><span class="glyphicon glyphicon-search"></span></button>
+                                      </span>
+                                    </div>
+                                  </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Đăng nhập <span class="glyphicon glyphicon-chevron-down"></span></a>
+                            <div class="dropdown-menu dropdown-form" role="menu" aria-labelledby="dLabel">
+                                <form id="Form1" runat="server" role="form">
+                                    <div class="form-group">
+                                        <label for="Tên đăng nhập">Email hoặc tên đăng nhập</label>
+                                        <input runat="server" type="text" class="form-control" id="username" placeholder="Nhập email hoặc tên đăn nhập" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Mật khẩu">Mật khẩu</label>
+                                        <input runat="server" type="password" class="form-control" id="password" placeholder="Mật khẩu" />
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input id="Checkbox1" runat="server" type="checkbox" /> Duy trì đăng nhập
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                            <label for="Mật khẩu"><a href="#" title="Quên mật khẩu">Quên mật khẩu?</a></label>
+                                    </div>
+                                    <asp:Button runat="server" CssClass="btn btn-default" ID="DangNhap" onclick="DangNhap_Click" Text="Đăng nhập" />
+                            </div>
+                        </li>
+                        <li>
+                            <a href="../Register.aspx">Đăng ký</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolderDefault" runat="server"></asp:ContentPlaceHolder>
+        <div class="bs-old-docs">
+            <div class="container">
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolderUnderBanner" runat="server"></asp:ContentPlaceHolder>
+                </div>
+                <div class="col-lg-4">
+                    <ul class="nav">
+                        <li>
+                            <a href="ViewMap.aspx" title="">
+                                <div class="container"">
+                                    <div class="new-maps-thumb"><img src="images/bdkn.png" class="img-thumbnail" title="" /></div>
+                                    <div class="new-maps">Thí nghiệm vật lý: dòng điện trong các môi trường. Vật lý lớp 12</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ViewMap.aspx"" title="">
+                                <div class="container"">
+                                    <div class="new-maps-thumb"><img src="images/bdkn.png" class="img-thumbnail" title="" /></div>
+                                    <div class="new-maps">Các phương pháp khảo sát hàm số, các loại hàm số cơ bản.</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ViewMap.aspx"" title="">
+                                <div class="container"">
+                                    <div class="new-maps-thumb"><img src="images/bdkn.png" class="img-thumbnail" title="" /></div>
+                                    <div class="new-maps">Bảng tuần hoàn các nguyên tố hóa học.</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- FOOTER -->
+        <footer class="bs-footer">
+            <div class="container">
+                <div class="col-lg-6">
+                    <p><b>Design by</b></p>
+                    <p>Nguyễn Minh Giàu. &nbsp;&nbsp;MSSV: 10110032</p>
+                    <p>Lê Duy Trung. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MSSV: 10110124</p>
+                </div>
+                <div class="col-lg-6">
+                    <p class="pull-right">Online: <b>45</b></p>
+                    <p class="pull-right">Truy cập: <b>2394</b></p>
+                    <p class="pull-right">Maps: <b>404</b></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../bootstrap-3.0.0/assets/js/jquery.js"></script>
+    <script src="../bootstrap-3.0.0/dist/js/bootstrap.js"></script>
+    <script src="../bootstrap-3.0.0/dist/js/bootstrap.min.js"></script>
+    <script src="../bootstrap-3.0.0/js/dropdown.js"></script>
+</form>
+</body>
+</html>
