@@ -1,0 +1,79 @@
+﻿<div class="container">
+        <div class="row">
+            <div class="col-lg-12"">
+                <div class="form-horizontal" style="margin-top:20px" role="form">
+                    <div class="form-group">
+                        <label for="Email" class="col-lg-4 control-label">Email</label>
+                        <div class="col-lg-8">
+                            <input type="email" class="form-control" id="Email" placeholder="Email" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="TenDangNhap" class="col-lg-4 control-label">Tên đăng nhập</label>
+                        <div class="col-lg-8">
+                            <input type="text" class="form-control" id="TenDangNhap" placeholder="Tên đăng nhập" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="MatKhau" class="col-lg-4 control-label">Mật khẩu</label>
+                        <div class="col-lg-8">
+                            <input type="password" class="form-control" id="MatKhau" placeholder="Mật khẩu" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="NhapLaiMatKhau" class="col-lg-4 control-label">Nhập lại mật khẩu</label>
+                        <div class="col-lg-8">
+                            <input type="password" class="form-control" id="NhapLaiNhapKhau" placeholder="Nhập lại mật khẩu" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="HoTen" class="col-lg-4 control-label">Họ Tên</label>
+                        <div class="col-lg-8">
+                            <input type="text" class="form-control" id="HoTen" placeholder="Họ và tên" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="NgaySinh" class="col-lg-4 control-label">Ngày Sinh</label>
+                        <div class="col-lg-8">
+                            @{
+                                var ds = new List<SelectListItem>();
+                                for (int i = 1;i<=31;i++)
+                                {
+                                    ds.Add(new SelectListItem { Text = i.ToString(), Value = (i-1).ToString()});
+                                }
+                                @Html.DropDownList("NgaySinh", ds);
+                                ds.Clear();
+                                for (int i = 1; i <= 12; i++)
+                                {
+                                    ds.Add(new SelectListItem { Text = i.ToString(), Value = (i - 1).ToString() });
+                                }
+                                @Html.DropDownList("ThangSinh", ds, new { @style = "margin-left:10px;" });
+                                ds.Clear();
+                                for (int i = 1900; i <= DateTime.Now.Year; i++)
+                                {
+                                    ds.Add(new SelectListItem { Text = i.ToString(), Value = (i - 1).ToString() });
+                                }
+                                @Html.DropDownList("NamSinh", ds, new { @style = "margin-left:10px;" });
+                                
+                            }
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="GioiTinh" class="col-lg-4 control-label">Giới tính</label>
+                        <div class="col-lg-2">
+                            <input class="" type="checkbox" /> Nữ
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-4">
+                            
+                        </div>
+                        <div class="col-lg-8">
+                            <button class="btn btn-info btn-lg" type="submit" value="Đăng ký">Đăng ký</button>
+                            <button class="btn btn-info btn-lg" type="reset">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
