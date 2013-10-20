@@ -23,7 +23,19 @@ namespace ConceptMaps
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css", "~/Content/style.css"));
+            
+            //Add bootstrap
+            bundles.Add(new StyleBundle("~/Content/bootstrap").Include(
+                "~/Content/bootstrap-3.0.0/dist/css/bootstrap.css",
+                "~/Content/bootstrap-3.0.0/assets/css/docs.css",
+                "~/Content/bootstrap-3.0.0/assets/css/pygments-manni.css",
+                "~/Content/bootstrap-3.0.0/examples/carousel/carousel.css"));
+
+            bundles.Add(new ScriptBundle("~/Content/bootstrap/js").Include(
+                "~/Content/bootstrap-3.0.0/dist/js/bootstrap.js",
+                "~/Content/bootstrap-3.0.0/assets/js/jquery.js",
+                "~/Content/bootstrap-3.0.0/js/dropdown.js"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",
